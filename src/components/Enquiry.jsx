@@ -28,13 +28,14 @@ function Enquiry() {
             .then((data) => {
               console.log(data);
               if (data && data.address) {
-                // Accessing detailed address information
+                // Extract only street, city, and postcode
                 const { road, city, postcode } = data.address;
-                // Constructing a full address string
+
+                // Constructing the address with only the required details
                 const fullAddress = [road, city, postcode]
                   .filter(Boolean)
                   .join(", ");
-                setLocation(fullAddress); // Set the location state with the full address
+                setLocation(fullAddress); // Set the location state with the required address
               } else {
                 setLocation("Location not found");
               }
