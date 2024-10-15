@@ -9,12 +9,15 @@
   justify-content: center;
   align-items: center;
   height: 58vh;
+  margin-top: 50px;
 }
 .feedback_form {
   width: 500px;
   display: flex;
   flex-direction: column;
   gap: 25px;
+  justify-content: center;
+  align-items: center;
 }
 .feedback_form input {
   width: 350px;

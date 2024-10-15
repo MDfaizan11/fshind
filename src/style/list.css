@@ -1,10 +1,4 @@
 /* General Styles */
-body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 20px;
-  background-color: #f4f4f4;
-}
 
 .list_main_wrapper {
   max-width: 100%;
@@ -51,7 +45,7 @@ td {
 }
 
 /* Image Styles */
-img {
+.list_img {
   border-radius: 5px;
   transition: transform 0.2s;
 }
@@ -76,7 +70,7 @@ button:hover {
 }
 
 @media (max-width: 600px) {
-  img {
+  .list_img {
     width: 80px; /* Adjusted for smaller screens */
   }
 

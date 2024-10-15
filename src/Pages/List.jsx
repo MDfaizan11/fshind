@@ -76,6 +76,7 @@ function List() {
                     src={getImageUrl(pair[0].$id)}
                     alt={pair[0].name}
                     style={{ width: "100px", height: "auto" }}
+                    className="list_img"
                   />
                 )}
               </td>
@@ -85,6 +86,7 @@ function List() {
                     src={getImageUrl(pair[1].$id)}
                     alt={pair[1].name}
                     style={{ width: "100px", height: "auto" }}
+                       className="list_img"
                   />
                 )}
               </td>
