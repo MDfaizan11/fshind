@@ -239,23 +239,7 @@ function Enquiry() {
             getAddress(latitude, longitude); // Call to get address after fetching coordinates
           },
           (err) => {
-            // Improved error handling
-            switch (err.code) {
-              case err.PERMISSION_DENIED:
-                setError("User denied the request for Geolocation.");
-                break;
-              case err.POSITION_UNAVAILABLE:
-                setError("Location information is unavailable.");
-                break;
-              case err.TIMEOUT:
-                setError("The request to get user location timed out.");
-                break;
-              case err.UNKNOWN_ERROR:
-                setError("An unknown error occurred.");
-                break;
-              default:
-                setError("An error occurred while fetching location.");
-            }
+            setError(err.message);
             setLoading(false);
           }
         );
@@ -268,15 +252,17 @@ function Enquiry() {
     const getAddress = async (lat, lng) => {
       try {
         const response = await fetch(
-          `https://nominatim.openstreetmap.org/reverse?lat=${lat}&lon=${lng}&format=json`
+          `https://nominatim.openstreetmap.org/reverse?lat=${lat}&lon=${lng}&format=json&addressdetails=1`
         );
-        if (!response.ok) {
-          throw new Error("Network response was not ok");
-        }
         const data = await response.json();
-        if (data && data.display_name) {
-          setLocation(data.display_name);
-          setAddress(data.display_name); // Also update address state with the fetched location
+        if (data && data.address) {
+          // Construct the full address string
+          const { road, suburb, city, state, country } = data.address;
+          const detailedAddress = [road, suburb, city, state, country]
+            .filter(Boolean)
+            .join(", "); // Join non-empty components with a comma
+          setLocation(detailedAddress);
+          setAddress(detailedAddress); // Also update address state with the fetched location
         } else {
           setLocation("Address not found");
         }
@@ -338,8 +324,6 @@ function Enquiry() {
 
   return (
     <>
-      {loading && <p>Loading location...</p>}
-      {error && <p className="error">{error}</p>}
       <div className="note">
         {toggled ? (
           <p className="english_text">
