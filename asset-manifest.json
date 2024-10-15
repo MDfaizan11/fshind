@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/fshind/static/css/main.0832cd5b.css",
-    "main.js": "/fshind/static/js/main.882133e1.js",
+    "main.js": "/fshind/static/js/main.2c82fb2b.js",
     "static/js/453.0b1a2245.chunk.js": "/fshind/static/js/453.0b1a2245.chunk.js",
     "static/media/Group 26 (3).svg": "/fshind/static/media/Group 26 (3).3f9bca044b8676a50fbd3f552a035581.svg",
     "static/media/WhatsApp Image 2024-09-20 at 13.52.20_70835bca.jpg": "/fshind/static/media/WhatsApp Image 2024-09-20 at 13.52.20_70835bca.dc8718388e62786ca3a8.jpg",
@@ -103,11 +103,11 @@
     "static/media/Group 23 (1).svg": "/fshind/static/media/Group 23 (1).32dccc0cb6e4d5957104504a278e934a.svg",
     "static/media/Group 21 (2).svg": "/fshind/static/media/Group 21 (2).b44d3cdccde9c76367d40efe933f53bb.svg",
     "main.0832cd5b.css.map": "/fshind/static/css/main.0832cd5b.css.map",
-    "main.882133e1.js.map": "/fshind/static/js/main.882133e1.js.map",
+    "main.2c82fb2b.js.map": "/fshind/static/js/main.2c82fb2b.js.map",
     "453.0b1a2245.chunk.js.map": "/fshind/static/js/453.0b1a2245.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.0832cd5b.css",
-    "static/js/main.882133e1.js"
+    "static/js/main.2c82fb2b.js"
   ]
 }
