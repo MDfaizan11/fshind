@@ -18,24 +18,40 @@ function Enquiry() {
   // Get user's current location
   useEffect(() => {
     if (navigator.geolocation) {
-      navigator.geolocation.getCurrentPosition((position) => {
-        const { latitude, longitude } = position.coords;
-        fetch(
-          `https://nominatim.openstreetmap.org/reverse?lat=${latitude}&lon=${longitude}&format=json`
-        )
-          .then((response) => response.json())
-          .then((data) => {
-            console.log(data);
-            if (data && data.display_name) {
-              setLocation(data.display_name); // Set the location state with the address
-            }
-          })
-          .catch((error) => {
-            console.error("Error fetching location:", error);
-          });
-      });
+      navigator.geolocation.getCurrentPosition(
+        (position) => {
+          const { latitude, longitude } = position.coords;
+          fetch(
+            `https://nominatim.openstreetmap.org/reverse?lat=${latitude}&lon=${longitude}&format=json&addressdetails=1`
+          )
+            .then((response) => response.json())
+            .then((data) => {
+              console.log(data);
+              if (data && data.address) {
+                // Accessing detailed address information
+                const { road, city, postcode } = data.address;
+                // Constructing a full address string
+                const fullAddress = [road, city, postcode]
+                  .filter(Boolean)
+                  .join(", ");
+                setLocation(fullAddress); // Set the location state with the full address
+              } else {
+                setLocation("Location not found");
+              }
+            })
+            .catch((error) => {
+              console.error("Error fetching location:", error);
+              setLocation("Unable to fetch location");
+            });
+        },
+        (error) => {
+          console.error("Error getting geolocation:", error);
+          setLocation("Unable to get your location");
+        }
+      );
     } else {
       alert("Geolocation is not supported by this browser.");
+      setLocation("Geolocation is not supported");
     }
   }, []);
 
