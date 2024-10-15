@@ -28,11 +28,22 @@ function Enquiry() {
             .then((data) => {
               console.log(data);
               if (data && data.address) {
-                // Extract only street, city, and postcode
-                const { road, city, postcode } = data.address;
+                // Extract street, city, and postcode
+                const street =
+                  data.address.road ||
+                  data.address.neighbourhood ||
+                  data.address.suburb ||
+                  "Street not found";
+                const city =
+                  data.address.city ||
+                  data.address.town ||
+                  data.address.village ||
+                  "City not found";
+                const postcode =
+                  data.address.postcode || "Postal code not found";
 
-                // Constructing the address with only the required details
-                const fullAddress = [road, city, postcode]
+                // Constructing the address with the required details
+                const fullAddress = [street, city, postcode]
                   .filter(Boolean)
                   .join(", ");
                 setLocation(fullAddress); // Set the location state with the required address
