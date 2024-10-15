@@ -11,62 +11,101 @@ function Enquiry() {
   const [email, setEmail] = useState("");
   const [address, setAddress] = useState("");
   const [select, setSelect] = useState("");
-  const [location, setLocation] = useState("");
+  const [location, setLocation] = useState({ lat: null, lng: null });
   const [message, setMessage] = useState("");
   const [toggled, setToggled] = useState(false);
+  const [error, setError] = useState("");
 
-  // Get user's current location
-  useEffect(() => {
+  const getCurrentLocation = () => {
     if (navigator.geolocation) {
       navigator.geolocation.getCurrentPosition(
         (position) => {
           const { latitude, longitude } = position.coords;
-          fetch(
-            `https://nominatim.openstreetmap.org/reverse?lat=${latitude}&lon=${longitude}&format=json&addressdetails=1`
-          )
-            .then((response) => response.json())
-            .then((data) => {
-              console.log(data);
-              if (data && data.address) {
-                // Extract street, city, and postcode
-                const street =
-                  data.address.road ||
-                  data.address.neighbourhood ||
-                  data.address.suburb ||
-                  "Street not found";
-                const city =
-                  data.address.city ||
-                  data.address.town ||
-                  data.address.village ||
-                  "City not found";
-                const postcode =
-                  data.address.postcode || "Postal code not found";
-
-                // Constructing the address with the required details
-                const fullAddress = [street, city, postcode]
-                  .filter(Boolean)
-                  .join(", ");
-                setLocation(fullAddress); // Set the location state with the required address
-              } else {
-                setLocation("Location not found");
-              }
-            })
-            .catch((error) => {
-              console.error("Error fetching location:", error);
-              setLocation("Unable to fetch location");
-            });
+          setLocation({ lat: latitude, lng: longitude });
+          getAddress(latitude, longitude);
         },
-        (error) => {
-          console.error("Error getting geolocation:", error);
-          setLocation("Unable to get your location");
+        (err) => {
+          setError(err.message);
         }
       );
     } else {
-      alert("Geolocation is not supported by this browser.");
-      setLocation("Geolocation is not supported");
+      setError("Geolocation is not supported by this browser.");
     }
-  }, []);
+  };
 
+  const getAddress = async (lat, lng) => {
+    try {
+      const response = await fetch(
+        `https://nominatim.openstreetmap.org/reverse?lat=${lat}&lon=${lng}&format=json`
+      );
+      const data = await response.json();
+      if (data.display_name) {
+        setAddress(data.display_name);
+      } else {
+        setAddress("Address not found");
+      }
+    } catch (err) {
+      setError("Error fetching address");
+    }
+  };
+
+  useEffect(() => {
+    getCurrentLocation();
+  }, []);
+  // Get user's current location
+
+  // useEffect(() => {
+  //   // Function to fetch location
+  //   const fetchLocation = (latitude, longitude) => {
+  //     fetch(
+  //       `https://nominatim.openstreetmap.org/reverse?lat=${latitude}&lon=${longitude}&format=json&addressdetails=1`
+  //     )
+  //       .then((response) => response.json())
+  //       .then((data) => {
+  //         if (data && data.address) {
+  //           // Extract street, city, and postal code
+  //           const street =
+  //             data.address.road || data.address.street || "Street not found";
+  //           const city =
+  //             data.address.city ||
+  //             data.address.town ||
+  //             data.address.village ||
+  //             "City not found";
+  //           const postcode = data.address.postcode || "Postal code not found";
+
+  //           // Construct the full address
+  //           const fullAddress = [street, city, postcode]
+  //             .filter(Boolean)
+  //             .join(", ");
+  //           setLocation(fullAddress); // Update state with the full address
+  //         } else {
+  //           setLocation("Location not found");
+  //         }
+  //       })
+  //       .catch((err) => {
+  //         console.error("Error fetching location:", err);
+  //         setError("Unable to fetch location");
+  //       });
+  //   };
+
+  //   // Get the user's current position
+  //   if (navigator.geolocation) {
+  //     navigator.geolocation.getCurrentPosition(
+  //       (position) => {
+  //         const { latitude, longitude } = position.coords;
+  //         console.log(`Latitude: ${latitude}, Longitude: ${longitude}`); // Debugging log
+  //         fetchLocation(latitude, longitude); // Fetch address based on coordinates
+  //       },
+  //       (err) => {
+  //         console.error("Error getting geolocation:", err);
+  //         setError("Unable to get your location");
+  //       }
+  //     );
+  //   } else {
+  //     alert("Geolocation is not supported by this browser.");
+  //     setError("Geolocation is not supported");
+  //   }
+  // }, []);
   const handleSubmit = async (e) => {
     e.preventDefault();
 
@@ -201,8 +240,9 @@ function Enquiry() {
             <input
               type="text"
               placeholder="Live location"
-              value={location}
+              value={address}
               onChange={(e) => setLocation(e.target.value)}
+              readOnly // Remove this if you want users to edit the input
             />
           </div>
           <div className="name">
