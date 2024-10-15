@@ -1,0 +1,86 @@
+/* General Styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 20px;
+  background-color: #f4f4f4;
+}
+
+.list_main_wrapper {
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  margin-top: 50px;
+}
+h2 {
+  text-align: center;
+  color: #333;
+}
+
+/* Table Styles */
+.maintable {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.thead {
+  background-color: #007bff;
+  color: white;
+}
+
+.thead th {
+  padding: 12px;
+  text-align: left;
+}
+
+tbody tr {
+  border-bottom: 1px solid #ddd;
+}
+
+tbody tr:hover {
+  background-color: #f1f1f1;
+}
+
+td {
+  padding: 12px;
+  text-align: center;
+}
+
+/* Image Styles */
+img {
+  border-radius: 5px;
+  transition: transform 0.2s;
+}
+
+/* img:hover {
+  transform: scale(1.05);
+} */
+
+/* Button Styles */
+button {
+  padding: 8px 12px;
+  background-color: #dc3545; /* Bootstrap Danger color */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+button:hover {
+  background-color: #c82333; /* Darker red on hover */
+}
+
+@media (max-width: 600px) {
+  img {
+    width: 80px; /* Adjusted for smaller screens */
+  }
+
+  td {
+    padding: 8px;
+  }
+}

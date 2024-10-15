@@ -1,0 +1,93 @@
+.poster_center {
+  padding: 5px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 25px;
+  justify-content: center;
+}
+.our_work_heading {
+  text-align: center;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.our_work_images {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  gap: 25px;
+  padding: 8px;
+}
+
+.our_work_images img {
+  width: 350px;
+  transition: 0.3s;
+}
+
+.our_work_images img:hover {
+  transform: scale(1.1);
+  transition: 0.3s;
+}
+
+.repairing_work_heading {
+  text-align: center;
+  height: 120px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.repair_images_poster_wrapper {
+  height: 550px;
+  width: 550px;
+  background: #000;
+  position: relative;
+}
+.repair_images_poster img {
+  width: 100%;
+}
+
+.before,
+.after {
+  width: 450px;
+  position: absolute;
+}
+.before {
+  top: 86px;
+  left: 60px;
+  height: 180px;
+  width: 213px;
+}
+.after {
+  top: 270px;
+  left: 222px;
+  height: 180px;
+  width: 213px;
+}
+
+@media only screen and (max-width: 426px) {
+  .repair_images_poster_wrapper {
+    height: 100%;
+    width: 100%;
+    background: #000;
+    position: relative;
+  }
+  .our_work_images img {
+    width: 100%;
+    transition: 0.3s;
+  }
+  .before {
+    width: 30%;
+    top: 16%;
+    left: 16%;
+    height: auto;
+  }
+  .after {
+    width: 30%;
+    top: 50%;
+    left: 45%;
+    height: auto;
+  }
+}

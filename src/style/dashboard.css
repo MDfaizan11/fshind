@@ -1,0 +1,35 @@
+.smHeader {
+  display: flex;
+  justify-content: space-evenly;
+  height: 50px;
+  align-items: center;
+  background-color: #30504c;
+}
+
+.nested_link {
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+  padding: 10px;
+}
+.dashbord_hading {
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.smHeader_button {
+  background-color: #30504c;
+  color: white;
+  border: 1px solid white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+}
+@media only screen and (max-width: 426px) {
+  .smHeader_button {
+    padding: 5px 10px;
+  }
+}

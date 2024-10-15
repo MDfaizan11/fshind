@@ -1,0 +1,53 @@
+.feedback_form_heading {
+  height: 110px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.feedback_form_wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 58vh;
+}
+.feedback_form {
+  width: 500px;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+.feedback_form input {
+  width: 350px;
+  height: 35px;
+}
+.feedback_form textarea {
+  width: 350px;
+  height: 150px;
+}
+.feedback_form button {
+  width: 180px;
+  height: 50px;
+  border-radius: 15px;
+  border: none;
+  background-color: #30504c;
+  color: white;
+  font-size: medium;
+  cursor: pointer;
+}
+.feedback_submit_button {
+  display: flex;
+}
+@media only screen and (max-width: 426px) {
+  .feedback_form {
+    width: 100%;
+    padding: 10px;
+  }
+  .feedback_form input {
+    width: 100%;
+    height: 35px;
+  }
+  .feedback_form textarea {
+    width: 100%;
+    height: 150px;
+  }
+}

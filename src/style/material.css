@@ -1,0 +1,121 @@
+.main_material_wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  margin-top: 50px;
+}
+.merial_heading {
+  text-align: center;
+}
+.material_logos {
+  display: flex;
+  justify-content: space-evenly;
+}
+.sofa_material {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+}
+.sofa_material p {
+  font-size: 18px;
+  color: #30504c;
+  font-weight: 700;
+}
+.sofa_image {
+  height: 226px;
+  width: 300px;
+}
+.sofa_image img {
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+  border-radius: 5px;
+  box-shadow: 1px 2px 10px #9bbfba;
+}
+.renew_sofa_repair {
+  display: flex;
+  justify-content: space-around;
+}
+.renew_sofa {
+  height: 400px;
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  align-items: center;
+  justify-content: center;
+  width: 350px;
+  border-radius: 15px;
+  box-shadow: 2px 3px 30px #bbcdcb;
+}
+.renew_sofa p {
+  text-align: center;
+}
+.renew_sofa .button {
+  background-color: #30504c;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  width: 94%;
+  border-radius: 15px;
+}
+.explor_services_heading {
+  height: 90px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@media (min-width: 426px) and (max-width: 768px) {
+  .renew_sofa_repair {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+}
+@media only screen and (max-width: 426px) {
+  .renew_sofa_repair {
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+  }
+  .material_logos {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  .renew_sofa {
+    flex-direction: column;
+    gap: 18px;
+    width: 90%;
+    height: 100%;
+    padding: 5px;
+  }
+  .sofa_image {
+    height: 187px;
+    width: 250px;
+  }
+  .renew_sofa .button {
+    padding: 5px 10px;
+
+    width: 75%;
+  }
+  .merial_heading h2 {
+    font-size: 19px;
+  }
+  .merial_heading p {
+    font-size: 12px;
+  }
+  .main_material_wrapper {
+    margin-top: 16px;
+  }
+  .sofa_material img {
+    height: 80px;
+    width: 80px;
+  }
+  .sofa_material p {
+    font-size: 12px;
+  }
+}

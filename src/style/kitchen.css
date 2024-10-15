@@ -1,0 +1,53 @@
+.kitechen_heading {
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 25px;
+  font-weight: 700;
+}
+.kitchen_img {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+}
+.kitchen_img img {
+  height: 400px;
+  width: 400px;
+}
+.kitchen_enquiry {
+  text-align: center;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.kitchen_enquiry button {
+  height: 43px;
+  width: 150px;
+  background-color: #30504c;
+  color: white;
+  font-weight: 700;
+  cursor: pointer;
+}
+@media only screen and (max-width: 426px) {
+  .kitchen_img img {
+    height: 100%;
+    width: 100%;
+    padding: 5px;
+  }
+  .kitechen_heading {
+    font-size: 16px;
+    text-align: center;
+  }
+}
+
+@media (min-width: 426px) and (max-width: 768px) {
+  .kitchen_img img {
+    height: 300px;
+    width: 300px;
+  }
+}

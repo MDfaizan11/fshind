@@ -1,0 +1,44 @@
+.main_wrapper_admin_uplode_img {
+  display: flex;
+  justify-content: center;
+  height: 500px;
+  align-items: center;
+}
+.uplode_image_form {
+  display: flex;
+  flex-direction: column;
+  width: 500px;
+  justify-content: center;
+  align-items: center;
+  gap: 43px;
+  height: 350px;
+  background-color: #30504c;
+  margin-top: 40px;
+  filter: drop-shadow(2px 2px 2px gray);
+  color: white;
+}
+.admin_uplode_img h2 {
+  text-align: center;
+}
+.uplode_button {
+  background-color: #30504c;
+  color: white;
+  padding: 10px 20px;
+  border: 1px solid white;
+  margin-top: 20px;
+  cursor: pointer;
+}
+@media only screen and (max-width: 426px) {
+  .uplode_image_form {
+    width: 100%;
+    text-align: center;
+  }
+
+  .smHeader {
+    font-size: small;
+  }
+  .admin_uplode_img {
+    width: 100%;
+    padding: 5px;
+  }
+}

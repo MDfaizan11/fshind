@@ -1,0 +1,30 @@
+.contact_wrapper {
+}
+.contact_info {
+  height: 350px;
+  width: 450px;
+  background-color: aliceblue;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+  gap: 30px;
+}
+.information {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.contact_icon {
+  display: flex;
+  gap: 48px;
+}
+@media only screen and (max-width: 426px) {
+  .contact_info {
+    height: auto;
+    width: 100%;
+    font-size: 12px;
+    margin-top: 15px;
+  }
+}

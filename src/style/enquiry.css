@@ -1,0 +1,120 @@
+.enquiry_heading {
+  display: flex;
+  justify-content: space-evenly;
+  height: 100px;
+  align-items: center;
+  font-size: large;
+  font-weight: 500;
+}
+.location {
+  display: flex;
+  gap: 10px;
+}
+.name input {
+  height: 35px;
+  width: 450px;
+}
+.enquiry_form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.name textarea {
+  width: 450px;
+  height: 150px;
+}
+
+.name select {
+  width: 450px;
+  height: 35px;
+}
+.enquiry_submit {
+  display: flex;
+  justify-content: center;
+}
+.enquiry_submit button {
+  height: 50px;
+  width: 150px;
+  background-color: #30504c;
+  color: white;
+  font-size: large;
+  font-weight: 700;
+  border-radius: 15px;
+  border: none;
+  cursor: pointer;
+}
+.main_enquiry_form {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+.note {
+  font-size: 18px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+  margin-bottom: 30px;
+  margin-top: 50px;
+}
+.hindi_text {
+  width: 80%;
+}
+.english_text {
+  width: 80%;
+}
+.lang_button {
+  width: 100%;
+  display: flex;
+  justify-content: end;
+}
+.lang_button button {
+  margin-right: 60px;
+  height: 40px;
+  width: 120px;
+  color: white;
+  background-color: #30504c;
+  font-size: 15px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+@media only screen and (max-width: 426px) {
+  .enquiry_form {
+    width: 100%;
+  }
+  .enquiry_heading {
+    display: flex;
+    font-size: 13px;
+  }
+  .name input {
+    height: 35px;
+    width: 100%;
+  }
+  .name select {
+    width: 100%;
+    height: 35px;
+  }
+  .name textarea {
+    width: 100%;
+    height: 150px;
+  }
+  .main_enquiry_form {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    width: 100%;
+    padding: 10px;
+  }
+  .hindi_text {
+    padding: 5px;
+    width: 100%;
+  }
+  .english_text {
+    padding: 5px;
+    width: 100%;
+  }
+  .note {
+    margin-top: 19px;
+  }
+}

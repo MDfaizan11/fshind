@@ -1,0 +1,51 @@
+.wardrobe_heading {
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 25px;
+  font-weight: 700;
+}
+.wardrobeimg_wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+  flex-wrap: wrap;
+}
+.wardrobeimg_wrapper img {
+  height: 400px;
+  width: 400px;
+}
+.wardrobe_button {
+  width: 100%;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  height: 120px;
+}
+.wardrobe_button button {
+  height: 43px;
+  width: 150px;
+  background-color: #30504c;
+  color: white;
+  margin-right: 45px;
+  cursor: pointer;
+}
+@media only screen and (max-width: 426px) {
+  .wardrobe_heading {
+    font-size: 18px;
+    text-align: center;
+  }
+  .wardrobeimg_wrapper img {
+    height: 100%;
+    width: 100%;
+    padding: 8px;
+  }
+}
+@media (min-width: 426px) and (max-width: 768px) {
+  .wardrobeimg_wrapper img {
+    height: 300px;
+    width: 300px;
+  }
+}

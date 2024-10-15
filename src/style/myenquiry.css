@@ -1,0 +1,48 @@
+.enquiry-container {
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.enquiry-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+.enquiry-table th,
+.enquiry-table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: center;
+}
+
+.enquiry-table th {
+  background-color: #f2f2f2;
+  color: #333;
+}
+
+.enquiry-table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.enquiry-table tr:hover {
+  background-color: #f1f1f1;
+}
+
+.delete-button {
+  background-color: #e74c3c;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.delete-button:hover {
+  background-color: #c0392b;
+}

@@ -1,0 +1,27 @@
+.testimonial-slider {
+  width: 90%;
+  margin: 0 auto;
+  text-align: center;
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 10px;
+  height: 250px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.testimonial {
+  padding: 10px;
+}
+.message {
+  font-size: 18px;
+  font-style: italic;
+  margin-bottom: 10px;
+}
+.stars {
+  margin-bottom: 10px;
+}
+.name {
+  font-weight: bold;
+  color: #333;
+}
