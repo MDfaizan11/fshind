@@ -9,8 +9,8 @@ import poster from "../assets/images/p3.jpg";
 import { Client, Storage } from "appwrite";
 const client = new Client();
 client
-  .setEndpoint("https://cloud.appwrite.io/v1") // Your Appwrite endpoint
-  .setProject("66f1567a0004216da07b"); // Replace with your project ID
+  .setEndpoint(process.env.REACT_APP_APPWRITE_URL) // Your Appwrite endpoint
+  .setProject(process.env.REACT_APP_APPWRITE_PROJECT_ID); // Replace with your project ID
 const storage = new Storage(client);
 function Repair() {
   const [filePairs, setFilePairs] = useState([]);
@@ -19,7 +19,9 @@ function Repair() {
     // Fetch all files from the storage bucket
     const fetchImages = async () => {
       try {
-        const response = await storage.listFiles("66f165ac00251b62f512"); // Your Bucket ID
+        const response = await storage.listFiles(
+          process.env.REACT_APP_APPWRITE_BUCKET_ID
+        ); // Your Bucket ID
         // Assuming you want to create pairs of files
         const pairedFiles = [];
         for (let i = 0; i < response.files.length; i += 2) {
@@ -36,7 +38,7 @@ function Repair() {
 
   // Get image URL from file ID
   const getImageUrl = (fileId) => {
-    return `https://cloud.appwrite.io/v1/storage/buckets/66f165ac00251b62f512/files/${fileId}/view?project=66f1567a0004216da07b`;
+    return `https://cloud.appwrite.io/v1/storage/buckets/${process.env.REACT_APP_APPWRITE_BUCKET_ID}/files/${fileId}/view?project=${process.env.REACT_APP_APPWRITE_PROJECT_ID}`;
   };
 
   console.log(getImageUrl);

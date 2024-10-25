@@ -14,8 +14,10 @@ const TestimonialSlider = () => {
     const fetchTestimonials = async () => {
       try {
         const response = await databases.listDocuments(
-          "66f15816002babdf364a", // Your Database ID
-          "66f15837002884ba12e0" // Your Collection ID
+          process.env.REACT_APP_APPWRITE_DATABSE_ID,
+          // Your Database ID
+          process.env.REACT_APP_APPWRITE_COLLECTION_ID1
+          // Your Collection ID
         );
         setTestimonials(response.documents); // Set the fetched documents to state
       } catch (error) {
