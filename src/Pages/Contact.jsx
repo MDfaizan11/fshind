@@ -3,7 +3,12 @@ import hero_img from "../assets/images/Group 1 (2).svg";
 import phone from "../assets/images/phone (1) 1.019439fdb33275979ac1354f2c8f0e2e.svg";
 import whatapp from "../assets/images/whatsapp (2) 1.ea0907697459ebac8a82ce1d60c0a53e.svg";
 import "../style/Contact.css";
+import { useNavigate } from "react-router-dom";
 function Contact() {
+  const navigate = useNavigate();
+  function handleEnquiry() {
+    navigate("/enquiry");
+  }
   return (
     <>
       <div className="home_hero_section">
@@ -19,7 +24,9 @@ function Contact() {
           </div>
           <div className="hero_section_contain_buttons">
             <button data-aos="fade-up">Discover Our Furnishings</button>
-            <button data-aos="fade-down">Contact Us</button>
+            <button data-aos="fade-down" onClick={handleEnquiry}>
+              Enquiry
+            </button>
           </div>
         </div>
         <div className="hero_section_img">
@@ -54,11 +61,11 @@ function Contact() {
         </div>
         <div className="contact_map_side">
           <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3721.752944610956!2d79.13406417503417!3d21.12241358055053!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bd4b99d4acef023%3A0xca41b7c4a70141fd!2sTechgicus%20Software%20Solutions%20Private%20Limited!5e0!3m2!1sen!2sin!4v1728987093438!5m2!1sen!2sin"
+            src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d15092.913819812855!2d79.10568952916739!3d21.190600400645096!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMjHCsDExJzAzLjkiTiA3OcKwMDYnNDMuMiJF!5e0!3m2!1sen!2sin!4v1729144404270!5m2!1sen!2sin"
             style={{ border: 0 }}
-            allowFullScreen=""
+            allowfullscreen=""
             loading="lazy"
-            referrerPolicy="no-referrer-when-downgrade"
+            referrerpolicy="no-referrer-when-downgrade"
             className="map"
           ></iframe>
         </div>

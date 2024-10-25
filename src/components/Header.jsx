@@ -1,60 +1,3 @@
-// import React, { useState } from "react";
-// import header_logo from "../assets/images/fS hIND lOGO-04 1.svg";
-// import { NavLink } from "react-router-dom";
-// import "../style/header.css";
-// import { GiHamburgerMenu } from "react-icons/gi";
-// import { ImCross } from "react-icons/im";
-// function Header() {
-//   const [menuOpen, setMenuOpen] = useState(false);
-//   const toggleMenu = () => {
-//     setMenuOpen(!menuOpen);
-//   };
-//   return (
-//     <>
-//       <div className="header">
-//         <div className="header_logo">
-//           <img src={header_logo} alt="fS hIND logo" />
-//         </div>
-//         <div className={menuOpen ? "header_menuu" : "header_menu"}>
-//           <NavLink
-//             to={"/"}
-//             className={"Navlink"}
-//             onClick={() => setMenuOpen(!menuOpen)}
-//           >
-//             Home
-//           </NavLink>
-//           <NavLink
-//             to={"/about"}
-//             className={"Navlink"}
-//             onClick={() => setMenuOpen(!menuOpen)}
-//           >
-//             About
-//           </NavLink>
-//           <NavLink
-//             // to={"/services"}
-//             className={"Navlink"}
-//             onClick={() => setMenuOpen(!menuOpen)}
-//           >
-//             Services
-//           </NavLink>
-
-//           <NavLink
-//             to={"/contact"}
-//             className={"Navlink"}
-//             onClick={() => setMenuOpen(!menuOpen)}
-//           >
-//             Contact Us
-//           </NavLink>
-//         </div>
-//         <div className="menu_icons" onClick={toggleMenu}>
-//           {menuOpen ? <ImCross /> : <GiHamburgerMenu />}
-//         </div>
-//       </div>
-//     </>
-//   );
-// }
-
-// export default Header;
 import React, { useState } from "react";
 import header_logo from "../assets/images/fS hIND lOGO-04 1.svg";
 import { NavLink } from "react-router-dom";
@@ -64,7 +7,7 @@ import { ImCross } from "react-icons/im";
 
 function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
-  const [servicesOpen, setServicesOpen] = useState(false); // State for services dropdown
+  const [servicesOpen, setServicesOpen] = useState(false);
 
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);

@@ -46,3 +46,10 @@ h2 {
 .delete-button:hover {
   background-color: #c0392b;
 }
+@media only screen and (max-width: 426px) {
+  .enquiry-container {
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    overflow: auto;
+  }
+}

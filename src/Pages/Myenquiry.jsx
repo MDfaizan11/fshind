@@ -10,8 +10,8 @@ function Myenquiry() {
     const fetchEnquiries = async () => {
       try {
         const response = await databases.listDocuments(
-          "66f15816002babdf364a", // Replace with your Database ID
-          "670df8ef0025cc746b53" // Replace with your Collection ID
+          process.env.REACT_APP_APPWRITE_DATABSE_ID, // Replace with your Database ID
+          process.env.REACT_APP_APPWRITE_COLLECTION_ID // Replace with your Collection ID
         );
         setEnquiries(response.documents);
       } catch (error) {
@@ -31,8 +31,9 @@ function Myenquiry() {
 
     try {
       await databases.deleteDocument(
-        "66f15816002babdf364a", // Replace with your Database ID
-        "670df8ef0025cc746b53", // Replace with your Collection ID
+        // "66f15816002babdf364a",
+        process.env.REACT_APP_APPWRITE_DATABSE_ID, // Replace with your Database ID
+        process.env.REACT_APP_APPWRITE_COLLECTION_ID, // Replace with your Collection ID
         id // The ID of the document to delete
       );
 
@@ -57,7 +58,7 @@ function Myenquiry() {
               <th>Email</th>
               <th>Address</th>
               <th>Service</th>
-              <th>Location</th>
+
               <th>Message</th>
               <th>Actions</th>
             </tr>
@@ -70,8 +71,8 @@ function Myenquiry() {
                 <td>{enquiry.email}</td>
                 <td>{enquiry.address}</td>
                 <td>{enquiry.service}</td>
-                <td>{enquiry.location}</td>
-                <td>{enquiry.enquiry}</td>
+
+                <td>{enquiry.message}</td>
                 <td>
                   <button
                     onClick={() => handleDelete(enquiry.$id)}

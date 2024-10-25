@@ -4,7 +4,8 @@ import hero_img from "../assets/images/Group 1 (2).svg";
 import img1 from "../assets/images/WhatsApp Image 2024-09-20 at 13.52.10_ed703781.jpg";
 import img2 from "../assets/images/WhatsApp Image 2024-09-20 at 13.52.20_2f888328.jpg";
 import img3 from "../assets/images/WhatsApp Image 2024-09-20 at 13.52.20_70835bca.jpg";
-import poster from "../assets/images/poster.png";
+import poster from "../assets/images/p3.jpg";
+
 import { Client, Storage } from "appwrite";
 const client = new Client();
 client

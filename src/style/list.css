@@ -77,4 +77,7 @@ button:hover {
   td {
     padding: 8px;
   }
+  .list_main_wrapper {
+    overflow: auto;
+  }
 }

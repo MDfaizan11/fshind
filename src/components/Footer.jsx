@@ -16,9 +16,11 @@ function Footer() {
           </div>
           <div className="footer_first_block_lorem">
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quis
-              tristique mauris. Donec euismod, justo at consectetur porttitor,
-              dui ipsum euismod ex, at consectetur enim velit et velit.
+              "At FSHind, we are committed to providing high-quality furniture
+              and exceptional customer service. From custom-made designs to
+              reliable repair services, we are here to meet all your home
+              furnishing needs. Explore our wide range of products and
+              experience convenience, quality, and style with FSHind."
             </p>
           </div>
           <div className="footer_first_block_social_icon">

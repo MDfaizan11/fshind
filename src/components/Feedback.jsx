@@ -13,8 +13,8 @@ function Feedback() {
 
     try {
       const response = await databases.createDocument(
-        "66f15816002babdf364a", // Database ID
-        "66f15837002884ba12e0", // Collection ID
+        process.env.REACT_APP_APPWRITE_DATABSE_ID,
+        process.env.REACT_APP_APPWRITE_COLLECTION_ID1,
         "unique()", // Unique ID generation
         {
           name,

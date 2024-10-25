@@ -1,11 +1,13 @@
 import React, { useEffect, useState } from "react";
 import { Client, Storage } from "appwrite";
-import "../style/list.css"
+import "../style/list.css";
+
 // Initialize Appwrite client
 const client = new Client();
 client
-  .setEndpoint("https://cloud.appwrite.io/v1") // Your Appwrite endpoint
-  .setProject("66f1567a0004216da07b"); // Replace with your project ID
+  .setEndpoint(process.env.REACT_APP_APPWRITE_URL) // Your Appwrite endpoint
+  .setProject(process.env.REACT_APP_APPWRITE_PROJECT_ID); // Your project ID
+
 const storage = new Storage(client);
 
 function List() {
@@ -14,13 +16,26 @@ function List() {
   useEffect(() => {
     // Fetch all files from the storage bucket
     const fetchImages = async () => {
+      const bucketId = process.env.REACT_APP_APPWRITE_BUCKET_ID;
+
+      // Check if bucketId is available
+      if (!bucketId) {
+        console.error("Bucket ID is missing. Check your .env file.");
+        return;
+      }
+
       try {
-        const response = await storage.listFiles("66f165ac00251b62f512"); // Your Bucket ID
-        // Assuming you want to create pairs of files
+        const response = await storage.listFiles(bucketId); // Your Bucket ID
+
+        // Log the response for debugging
+        console.log("Fetched files:", response.files);
+
+        // Create pairs of files
         const pairedFiles = [];
         for (let i = 0; i < response.files.length; i += 2) {
-          pairedFiles.push(response.files.slice(i, i + 2)); // Create pairs
+          pairedFiles.push(response.files.slice(i, i + 2)); // Create pairs of 2
         }
+
         setFilePairs(pairedFiles);
       } catch (error) {
         console.error("Error fetching files:", error);
@@ -32,7 +47,7 @@ function List() {
 
   // Get image URL from file ID
   const getImageUrl = (fileId) => {
-    return `https://cloud.appwrite.io/v1/storage/buckets/66f165ac00251b62f512/files/${fileId}/view?project=66f1567a0004216da07b`;
+    return `${process.env.REACT_APP_APPWRITE_URL}/storage/buckets/${process.env.REACT_APP_APPWRITE_BUCKET_ID}/files/${fileId}/view?project=${process.env.REACT_APP_APPWRITE_PROJECT_ID}`;
   };
 
   // Handle file deletion for a specific pair
@@ -40,7 +55,7 @@ function List() {
     try {
       await Promise.all(
         filesToDelete.map((file) =>
-          storage.deleteFile("66f165ac00251b62f512", file.$id)
+          storage.deleteFile(process.env.REACT_APP_APPWRITE_BUCKET_ID, file.$id)
         )
       ); // Delete selected files
       // Update state to remove deleted pairs
@@ -86,7 +101,7 @@ function List() {
                     src={getImageUrl(pair[1].$id)}
                     alt={pair[1].name}
                     style={{ width: "100px", height: "auto" }}
-                       className="list_img"
+                    className="list_img"
                   />
                 )}
               </td>

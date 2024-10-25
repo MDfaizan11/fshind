@@ -4,6 +4,7 @@
   flex-wrap: wrap;
   gap: 25px;
   justify-content: center;
+  margin-top: 25px;
 }
 .our_work_heading {
   text-align: center;
@@ -40,9 +41,9 @@
 }
 
 .repair_images_poster_wrapper {
-  height: 550px;
+  height: 493px;
   width: 550px;
-  background: #000;
+  /* background: #000; */
   position: relative;
 }
 .repair_images_poster img {
@@ -55,23 +56,22 @@
   position: absolute;
 }
 .before {
-  top: 86px;
-  left: 60px;
-  height: 180px;
-  width: 213px;
+  top: 116px;
+  left: 39px;
+  height: 268px;
+  width: 235px;
 }
 .after {
-  top: 270px;
-  left: 222px;
-  height: 180px;
-  width: 213px;
+  top: 116px;
+  left: 280px;
+  height: 269px;
+  width: 234px;
 }
-
 @media only screen and (max-width: 426px) {
   .repair_images_poster_wrapper {
     height: 100%;
     width: 100%;
-    background: #000;
+    /* background: #000; */
     position: relative;
   }
   .our_work_images img {
@@ -79,15 +79,15 @@
     transition: 0.3s;
   }
   .before {
-    width: 30%;
-    top: 16%;
-    left: 16%;
-    height: auto;
+    width: 44%;
+    top: 23%;
+    left: 5%;
+    height: 54%;
   }
   .after {
-    width: 30%;
-    top: 50%;
-    left: 45%;
-    height: auto;
+    width: 46%;
+    top: 23%;
+    left: 50%;
+    height: 54%;
   }
 }

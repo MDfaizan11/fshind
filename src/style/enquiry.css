@@ -60,9 +60,11 @@
 }
 .hindi_text {
   width: 80%;
+  font-weight: 700;
 }
 .english_text {
   width: 80%;
+  font-weight: 700;
 }
 .lang_button {
   width: 100%;
