@@ -38,15 +38,11 @@ function Material() {
     <>
       <div className="main_material_wrapper">
         <div className="merial_heading">
-          <h2 data-aos="zoom-out-up">
+          <h2>
             Crafted With Excellent{" "}
             <b style={{ color: "orangered" }}>Material </b>
           </h2>
-          <p
-            data-aos="fade-down"
-            data-aos-easing="linear"
-            data-aos-duration="1500"
-          >
+          <p>
             Each piece is meticulously designed to bring both elegance and
             comfort into your home, ensuring that it stands the test of time
             while enhancing your living space.
@@ -55,58 +51,44 @@ function Material() {
         <div className="material_logos">
           <div
             className="sofa_material"
-            data-aos="fade-up"
-            data-aos-duration="3000"
             onClick={handleSwitch}
+            data-aos="fade-up"
           >
             <img src={sofa} alt="" />
             <p>Sofa</p>
           </div>
           <div
             className="sofa_material"
-            data-aos="fade-zoom-in"
-            data-aos-easing="ease-in-back"
-            data-aos-delay="300"
-            data-aos-offset="0"
             onClick={handledining}
+            data-aos="fade-down"
           >
             <img src={furniture} alt="" />
             <p>Dining Table</p>
           </div>
-          <div
-            className="sofa_material"
-            data-aos="fade-down"
-            data-aos-easing="linear"
-            data-aos-duration="1500"
-            onClick={handlebed}
-          >
+          <div className="sofa_material" onClick={handlebed} data-aos="fade-up">
             <img src={bed} alt="" />
             <p>Bed</p>
           </div>
           <div
             className="sofa_material"
-            data-aos="fade-up"
-            data-aos-duration="3000"
             onClick={handlewardrobe}
+            data-aos="fade-down"
           >
             <img src={wardrobe} alt="" />
             <p>wardrobe</p>
           </div>
           <div
             className="sofa_material"
-            data-aos="fade-down"
-            data-aos-easing="linear"
-            data-aos-duration="1500"
             onClick={handleDressing}
+            data-aos="fade-up"
           >
             <img src={Dressing} alt="" />
             <p>Dressing</p>
           </div>
           <div
             className="sofa_material"
-            data-aos="fade-up"
-            data-aos-duration="3000"
             onClick={handlekitchen}
+            data-aos="fade-down"
           >
             <img src={Modular_Kitchen} alt="" />
             <p>Modular Kitchen</p>
