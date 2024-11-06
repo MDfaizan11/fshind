@@ -58,7 +58,8 @@ function Myenquiry() {
               <th>Email</th>
               <th>Address</th>
               <th>Service</th>
-
+              <th>Day</th>
+              <th>Time</th>
               <th>Message</th>
               <th>Actions</th>
             </tr>
@@ -71,7 +72,8 @@ function Myenquiry() {
                 <td>{enquiry.email}</td>
                 <td>{enquiry.address}</td>
                 <td>{enquiry.service}</td>
-
+                <td>{enquiry.Day}</td>
+                <td>{enquiry.Time}</td>
                 <td>{enquiry.message}</td>
                 <td>
                   <button

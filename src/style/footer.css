@@ -62,6 +62,7 @@
     grid-template-columns: 1fr;
     padding: 10px;
     gap: 25px;
+    margin-top: 50px;
   }
   .footer_first_block {
     gap: 7px;
