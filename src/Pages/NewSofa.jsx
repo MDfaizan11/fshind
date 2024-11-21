@@ -2,16 +2,18 @@ import React from "react";
 import hero_img from "../assets/images/Group 1 (2).svg";
 import "../style/newsofa.css";
 
-import img12 from "../assets/images/WhatsApp Image 2024-09-20 at 13.52.10_ed703781.jpg";
-import img13 from "../assets/images/WhatsApp Image 2024-09-20 at 13.52.20_2f888328.jpg";
-import img14 from "../assets/images/WhatsApp Image 2024-09-20 at 13.52.20_70835bca.jpg";
-import img15 from "../assets/images/WhatsApp Image 2024-09-20 at 13.52.21_0fe9f2d9.jpg";
-import img16 from "../assets/images/WhatsApp Image 2024-09-20 at 13.52.21_5e7c263f.jpg";
-import img17 from "../assets/images/WhatsApp Image 2024-09-20 at 13.52.21_7cbbd10f.jpg";
-import s1 from "../assets/images/s1.jpg";
-import s2 from "../assets/images/s2.jpg";
-import s3 from "../assets/images/s3.jpg";
-import s4 from "../assets/images/s4.jpg";
+import img12 from "../assets/images/sf1.jpg";
+import img13 from "../assets/images/sf2.jpg";
+import img14 from "../assets/images/sf3.jpg";
+import img15 from "../assets/images/sf4.jpg";
+import img16 from "../assets/images/sf5.jpg";
+import img17 from "../assets/images/sf6.jpg";
+import s1 from "../assets/images/sf7.jpg";
+import s2 from "../assets/images/sf8.jpg";
+import s3 from "../assets/images/sf9.jpg";
+import s4 from "../assets/images/sf10.jpg";
+import s5 from "../assets/images/sf11.jpg";
+import s6 from "../assets/images/sf12.jpg";
 
 import { useNavigate } from "react-router-dom";
 function NewSofa() {
@@ -53,6 +55,8 @@ function NewSofa() {
           <img src={s2} alt="" data-aos="flip-right" />
           <img src={s3} alt="" data-aos="flip-left" />
           <img src={s4} alt="" />
+          <img src={s5} alt="" />
+          <img src={s6} alt="" />
         </div>
       </div>
       <div className="nsofa_enquiry">

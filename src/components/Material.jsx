@@ -8,8 +8,8 @@ import Dressing from "../assets/images/Group 17 (3).svg";
 import Modular_Kitchen from "../assets/images/Group 18 (3).svg";
 import sofa_image from "../assets/images/IMG-20240906-WA0115(1).jpg";
 import { useNavigate } from "react-router-dom";
-import s1 from "../assets/images/s1.jpg";
-import s2 from "../assets/images/s2.jpg";
+import s1 from "../assets/images/sf7.jpg";
+import s2 from "../assets/images/sf10.jpg";
 
 function Material() {
   const navigate = useNavigate();

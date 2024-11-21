@@ -3,7 +3,7 @@ import "../style/dressing.css";
 import d1 from "../assets/images/dr1.webp";
 import d2 from "../assets/images/dr2.jpg";
 import d3 from "../assets/images/dr3.webp";
-import d4 from "../assets/images/dr4.jpg";
+// import d4 from "../assets/images/dr4.jpg";
 import d5 from "../assets/images/dr5.webp";
 import d6 from "../assets/images/dr6.webp";
 import d7 from "../assets/images/dr7.webp";
@@ -28,7 +28,7 @@ function Dressing() {
         <img src={d1} alt="placeholder" data-aos="fade-up" />
         <img src={d2} alt="placeholder" data-aos="fade-down" />
         <img src={d3} alt="placeholder" data-aos="fade-up" />
-        <img src={d4} alt="placeholder" data-aos="fade-down" />
+        {/* <img src={d4} alt="placeholder" data-aos="fade-down" /> */}
         <img src={d5} alt="placeholder" data-aos="fade-up" />
         <img src={d6} alt="placeholder" data-aos="fade-down" />
         <img src={d7} alt="placeholder" data-aos="fade-up" />

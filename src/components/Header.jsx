@@ -58,13 +58,13 @@ function Header() {
                 >
                   New Sofa
                 </NavLink>
-                <NavLink
-                  to={"/dining"}
+                {/* <NavLink
+                  to={"#"}
                   className={"dropdown_item"}
                   onClick={() => setMenuOpen(!menuOpen)}
                 >
                   New Dining
-                </NavLink>
+                </NavLink> */}
                 <NavLink
                   to={"/bed"}
                   className={"dropdown_item"}
@@ -79,20 +79,20 @@ function Header() {
                 >
                   New Wardrobe
                 </NavLink>
-                <NavLink
-                  to={"/dressing"}
+                {/* <NavLink
+                  to={"#"}
                   className={"dropdown_item"}
                   onClick={() => setMenuOpen(!menuOpen)}
                 >
                   New Dressing
-                </NavLink>
-                <NavLink
-                  to={"/kitchen"}
+                </NavLink> */}
+                {/* <NavLink
+                  to={"#"}
                   className={"dropdown_item"}
                   onClick={() => setMenuOpen(!menuOpen)}
                 >
                   Modular Kitchen
-                </NavLink>
+                </NavLink> */}
               </div>
             )}
           </div>

@@ -21,11 +21,11 @@ import Uplode from "./Pages/Uplode";
 import Feedback from "./components/Feedback";
 import ScrollToTop from "./components/ScrollToTop";
 import SofaImg from "./components/SofaImg";
-import Dining from "./components/Dining";
+// import Dining from "./components/Dining";
 import Bed from "./components/Bed";
 import Wardrobe from "./components/Wardrobe";
-import Dressing from "./components/Dressing";
-import Kitchen from "./components/Kitchen";
+// import Dressing from "./components/Dressing";
+// import Kitchen from "./components/Kitchen";
 function App() {
   useEffect(() => {
     // Scroll to the top when this page is loaded
@@ -61,11 +61,11 @@ function App() {
           <Route path="/login" element={<Login />} />
           <Route path="/feedback" element={<Feedback />} />
           <Route path="/sofaimg" element={<SofaImg />} />
-          <Route path="/dining" element={<Dining />} />
+          {/* <Route path="/dining" element={<Dining />} /> */}
           <Route path="/bed" element={<Bed />} />
           <Route path="/wardrobe" element={<Wardrobe />} />
-          <Route path="/dressing" element={<Dressing />} />
-          <Route path="/kitchen" element={<Kitchen />} />
+          {/* <Route path="/dressing" element={<Dressing />} /> */}
+          {/* <Route path="/kitchen" element={<Kitchen />} /> */}
         </Routes>
         <Footer />
       </BrowserRouter>
